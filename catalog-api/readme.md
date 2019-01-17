@@ -1,39 +1,58 @@
-# Разработка API (catalog) на фреймворке Laravel
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-## Описание задачи
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-Необходимо написать простейшее API для каталога товаров. Приложение должно содержать:
-- Категории товаров
-- Конкретные товары, которые принадлежат к какой-то категории (один товар может принадлежать нескольким категориям)
-- Пользователей, которые могут авторизоваться (авторизация через jwt- токены)
+## About Laravel
 
-Возможные действия:
-- Получение списка всех категорий
-- Получение списка товаров в конкретной категории
-- Авторизация пользователей
-- Добавление/Редактирование/Удаление категории (для авторизованных пользователей)
-- Добавление/Редактирование/Удаление товара (для авторизованных пользователей)
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-## Технические требования
-1. Приложение должно быть написано на PHP
-2. Результаты запросов должны быть представлены в формате JSON
-4. Результат задания должен быть ввиде merge request на этот репозиторий в github, должна быть инструкция по запуску проекта. Также необходимо пояснить, сколько на каждую часть проекта ушло времени
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Доп. задачи (опционально выбрать две задачи из списка)
-- Добавить email верификацию при регистрации
-- Добавить фильтры к товарам (цвет, вес, цена и тд), и реализовать метод получение товара по фильтру
-- Добавить сущность тэгов к товарам и категориям, написать методы для вывода тэгов по товарам и категориям
-- Добавить роли (админ, модератор, пользователь) и на все методы с операциями добавление/редактирование/удаление поставить валидацию ролей админа и модератора
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
-## Критерии оценки
-- Архитектурная организация API
-- Грамотное применение ООП и паттернов проектирования
-- Корректная обработка внештатных ситуаций
-- Код-стайл и соблюдение стандартов
+## Learning Laravel
 
-## Полезные материалы
-- [Документация Laravel](https://laravel.com/docs/5.7/ "Документация Laravel") рекомендую читать его как книгу:)
-- Для авторизации можно использовать встроенный [Laravel Passport](https://laravel.com/docs/5.7/passport "Laravel Passport") или более простой пакет [jwt-auth](https://github.com/tymondesigns/jwt-auth "jwt-auth")
-- Всякие ништяки по Laravel от [ru community](https://github.com/LaravelRUS/awesome-laravel-rus "ru community")
-- Аналогичный источник от [en community](https://github.com/chiraggude/awesome-laravel "en community")
-- [Laravel Best Practices](https://github.com/alexeymezenin/laravel-best-practices "Laravel Best Practices") must read для каждого разработчика
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+
+If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+
+## Laravel Sponsors
+
+We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Pulse Storm](http://www.pulsestorm.net/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
