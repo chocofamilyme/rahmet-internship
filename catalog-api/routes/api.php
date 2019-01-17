@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,26 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('products', 'ProductController');
-Route::resource('categories', 'CategoryController');
-
-Route::post('login', 'AuthController@login');
-Route::post('register', 'AuthController@register');
-Route::get('logout', 'AuthController@logout');
-Route::get('user', 'AuthController@user');
-
-Route::get('categories/{category}/products', 'CategoryProductController@show');
-
-
-Route::get('email/show', "VerificationController@show");  
-Route::get('email/verify', "VerificationController@verify");
-Route::get('email/resend', "VerificationController@resend");
-
-Route::patch('tags/{tag}', 'TagController@update');
-Route::delete('tags/{tag}', 'TagController@destroy');
-
-Route::get('categories/{category}/tags', 'CategoryTagController@show');
-Route::post('categories/{category}/tags', 'CategoryTagController@store');
-
-Route::get('products/{product}/tags', 'ProductTagController@show');
-Route::post('products/{product}/tags', 'ProductTagController@store');
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
