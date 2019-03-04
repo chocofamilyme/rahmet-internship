@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Http\CategoryRequest;
 
-class CategoriesController extends Controller
+class CategoryController extends Controller
 {
     /**
      * @param $id

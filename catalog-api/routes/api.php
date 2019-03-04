@@ -15,15 +15,16 @@ use Illuminate\Http\Request;
 
 // Информативные эндпоинты
 Route::get('products', 'ProductsController@getAllProducts');
-Route::get('categories', 'CategoriesController@getAllCategories');
-Route::get('categories/{categoryId}', 'CategoriesController@showProductsInCategory');
 Route::get('products/search', 'ProductsController@searchProducts');
+
+Route::get('categories', 'CategoryController@getAllCategories');
+Route::get('categories/{categoryId}', 'CategoryController@showProductsInCategory');
 
 // Делающие эндпоинты
 Route::group(['middleware' => ['auth:api', 'verified']], function(){
     // категорические эндпоинты
-    Route::post('categories/make', 'CategoriesController@makeCategory');
-    Route::post('categories/{categoryId}/destroy', 'CategoriesController@destroyCategory');
+    Route::post('categories/make', 'CategoryController@makeCategory');
+    Route::post('categories/{categoryId}/destroy', 'CategoryController@destroyCategory');
 
     // продуктовые эндпоинты
     Route::post('products/{ProductId}/destroy', 'ProductsController@destroyProduct');

@@ -93,12 +93,11 @@ class ProductsController extends Controller
      * @param $productId
      * @param Product $productContainer
      * @param $categoryId
-     * @param Category $categoryContainer
      * @return \Illuminate\Http\JsonResponse
      */
-    public function addCategory($productId, Product $productContainer, $categoryId, Category $categoryContainer)
+    public function addCategory($productId, Product $productContainer, $categoryId)
     {
-        $productContainer->add_category($productId, $categoryId);
+        $productContainer->addCategory($productId, $categoryId);
         return response()->json($productContainer);
     }
 
